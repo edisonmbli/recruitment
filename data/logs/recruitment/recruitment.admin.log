@@ -1,0 +1,247 @@
+2021-03-21 13:09:04,311 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 13:09:51,593 interview.admin 39 INFO     edisonmbli exported 1 candidate records
+2021-03-21 13:10:18,391 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 13:10:41,953 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 13:10:45,161 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/recruitment/settings.py changed, reloading.
+2021-03-21 13:10:45,551 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 13:10:48,752 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 13:11:00,792 interview.admin 39 INFO     edisonmbli exported 2 candidate records
+2021-03-21 13:21:12,707 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/manage.py changed, reloading.
+2021-03-21 21:34:13,945 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 21:35:37,674 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 21:50:23,469 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/recruitment/urls.py changed, reloading.
+2021-03-21 21:50:25,610 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:06:32,135 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-21 22:06:34,134 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:06:56,255 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-21 22:06:58,206 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:07:01,752 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-21 22:07:03,490 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:07:21,595 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-21 22:07:23,053 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:07:26,619 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-21 22:07:28,044 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:07:54,380 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-21 22:07:55,839 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:07:58,892 django.request 230 ERROR    Internal Server Error: /admin/interview/candidate/4/change/
+Traceback (most recent call last):
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1569, in _changeform_view
+    request, obj, change=not add, fields=flatten_fieldsets(fieldsets)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 679, in get_form
+    readonly_fields = self.get_readonly_fields(request, obj)
+  File "/Users/edisonlee/Documents/projects/recruitment/interview/admin.py", line 73, in get_readonly_fields
+    group_names = self.get_group_name(request.user)
+AttributeError: 'CandidateAdmin' object has no attribute 'get_group_name'
+2021-03-21 22:08:23,535 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-21 22:08:25,261 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:08:28,521 django.request 230 ERROR    Internal Server Error: /admin/interview/candidate/4/change/
+Traceback (most recent call last):
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1569, in _changeform_view
+    request, obj, change=not add, fields=flatten_fieldsets(fieldsets)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 679, in get_form
+    readonly_fields = self.get_readonly_fields(request, obj)
+  File "/Users/edisonlee/Documents/projects/recruitment/interview/admin.py", line 73, in get_readonly_fields
+    group_names = self.get_group_names(request.user)
+AttributeError: 'CandidateAdmin' object has no attribute 'get_group_names'
+2021-03-21 22:08:37,504 django.request 230 ERROR    Internal Server Error: /admin/interview/candidate/4/change/
+Traceback (most recent call last):
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1656, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1534, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1569, in _changeform_view
+    request, obj, change=not add, fields=flatten_fieldsets(fieldsets)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 679, in get_form
+    readonly_fields = self.get_readonly_fields(request, obj)
+  File "/Users/edisonlee/Documents/projects/recruitment/interview/admin.py", line 73, in get_readonly_fields
+    group_names = self.get_group_names(request.user)
+AttributeError: 'CandidateAdmin' object has no attribute 'get_group_names'
+2021-03-21 22:11:50,953 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-21 22:11:52,843 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:14:18,883 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-21 22:14:21,119 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:15:12,676 interview.admin 83 INFO     interviewer is in user's group for david
+2021-03-21 22:15:12,691 interview.admin 83 INFO     interviewer is in user's group for david
+2021-03-21 22:19:23,993 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-21 22:19:26,297 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:26:56,433 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-21 22:26:58,452 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:27:09,184 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-21 22:27:10,621 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:27:35,903 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-21 22:27:38,249 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:27:54,210 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-21 22:27:55,650 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:33:47,301 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-21 22:33:49,431 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:34:37,512 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-21 22:34:39,547 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:35:08,520 django.request 230 ERROR    Internal Server Error: /admin/interview/candidate/
+Traceback (most recent call last):
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1693, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/Users/edisonlee/Documents/projects/recruitment/interview/admin.py", line 89, in get_changelist_instance
+    self.list_editable = self.get_list_editable(request)
+  File "/Users/edisonlee/Documents/projects/recruitment/interview/admin.py", line 83, in get_list_editable
+    if request.user.is_super_user or 'hr' in group_names:
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/functional.py", line 241, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'is_super_user'
+2021-03-21 22:35:22,459 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-21 22:35:24,504 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:35:25,702 django.request 230 ERROR    Internal Server Error: /admin/interview/candidate/
+Traceback (most recent call last):
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1693, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/Users/edisonlee/Documents/projects/recruitment/interview/admin.py", line 89, in get_changelist_instance
+    self.list_editable = self.get_list_editable(request)
+  File "/Users/edisonlee/Documents/projects/recruitment/interview/admin.py", line 83, in get_list_editable
+    if request.user.is_super_user() or 'hr' in group_names:
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/functional.py", line 241, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'is_super_user'
+2021-03-21 22:35:28,756 django.request 230 ERROR    Internal Server Error: /admin/interview/candidate/
+Traceback (most recent call last):
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1693, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/Users/edisonlee/Documents/projects/recruitment/interview/admin.py", line 89, in get_changelist_instance
+    self.list_editable = self.get_list_editable(request)
+  File "/Users/edisonlee/Documents/projects/recruitment/interview/admin.py", line 83, in get_list_editable
+    if request.user.is_super_user() or 'hr' in group_names:
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/functional.py", line 241, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'is_super_user'
+2021-03-21 22:36:11,545 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-21 22:36:29,682 django.request 230 ERROR    Internal Server Error: /admin/interview/candidate/
+Traceback (most recent call last):
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1693, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/Users/edisonlee/Documents/projects/recruitment/interview/admin.py", line 89, in get_changelist_instance
+    self.list_editable = self.get_list_editable(request)
+  File "/Users/edisonlee/Documents/projects/recruitment/interview/admin.py", line 83, in get_list_editable
+    if request.user.is_super_user or 'hr' in group_names:
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/functional.py", line 241, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'is_super_user'
+2021-03-21 22:36:59,869 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-21 22:37:01,821 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
