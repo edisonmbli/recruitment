@@ -5,6 +5,7 @@ from django.template import loader
 from django.http import HttpResponse
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import CreateView
+from django.views.generic.detail import DetailView
 
 
 # Create your views here.
@@ -29,6 +30,12 @@ def detail(request, job_id):
         raise Http404("Job does not exist")
 
     return render(request, 'job.html', {'job': job})
+
+
+class ResumeDetailView(DetailView):
+    """ 简历详情页 """
+    model = Resume
+    template_name = 'resume_detail.html'
 
 
 class ResumeCreateView(LoginRequiredMixin, CreateView):

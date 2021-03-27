@@ -12,5 +12,8 @@ urlpatterns = [
     # 提交简历
     path('resume/add/', views.ResumeCreateView.as_view(), name="resume-add"),
 
+    # 简历详情页
+    path('resume/<int:pk>/', views.ResumeDetailView.as_view(), name='resume-detail'),
+
     path("", views.joblist, name="name")
 ]

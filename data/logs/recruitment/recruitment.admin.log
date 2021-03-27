@@ -462,3 +462,88 @@ Traceback (most recent call last):
   File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/template/base.py", line 534, in invalid_block_tag
     "or load this tag?" % (token.lineno, command)
 django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 4: 'bootstrap_form'. Did you forget to register or load this tag?
+2021-03-27 23:58:15,617 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-27 23:58:58,685 django.request 230 ERROR    Internal Server Error: /admin/jobs/resume/
+Traceback (most recent call last):
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1719, in changelist_view
+    response = self.response_action(request, queryset=cl.get_queryset(request))
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1402, in response_action
+    response = func(self, request, queryset)
+  File "/Users/edisonlee/Documents/projects/recruitment/jobs/admin.py", line 31, in enter_interview_process
+    messages.add_message(request, messages.INFO,
+AttributeError: module 'django.core.checks.messages' has no attribute 'add_message'
+2021-03-28 00:01:30,557 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/jobs/admin.py changed, reloading.
+2021-03-28 00:01:32,250 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-28 00:01:39,246 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-28 00:01:41,075 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-28 00:02:25,845 django.request 230 ERROR    Internal Server Error: /admin/interview/candidate/
+Traceback (most recent call last):
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1719, in changelist_view
+    response = self.response_action(request, queryset=cl.get_queryset(request))
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1402, in response_action
+    response = func(self, request, queryset)
+  File "/Users/edisonlee/Documents/projects/recruitment/interview/admin.py", line 27, in notify_interviewer
+    interviewers = obj.first_interviewer_user.username + ';' + interviewers
+AttributeError: 'NoneType' object has no attribute 'username'
+2021-03-28 00:05:10,235 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-28 00:05:23,340 django.request 230 ERROR    Internal Server Error: /admin/interview/candidate/
+Traceback (most recent call last):
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 614, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1719, in changelist_view
+    response = self.response_action(request, queryset=cl.get_queryset(request))
+  File "/Users/edisonlee/.virtualenvs/django_dev/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1402, in response_action
+    response = func(self, request, queryset)
+  File "/Users/edisonlee/Documents/projects/recruitment/interview/admin.py", line 27, in notify_interviewer
+    interviewers = obj.first_interviewer_user.username + ';' + interviewers
+AttributeError: 'NoneType' object has no attribute 'username'
+2021-03-28 00:06:23,246 django.utils.autoreload 240 INFO     /Users/edisonlee/Documents/projects/recruitment/interview/admin.py changed, reloading.
+2021-03-28 00:06:24,850 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-28 00:38:06,131 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader
+2021-03-28 00:50:42,439 django.utils.autoreload 617 INFO     Watching for file changes with StatReloader

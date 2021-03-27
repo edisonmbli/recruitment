@@ -1,4 +1,8 @@
 from collections import defaultdict
+
+from django.utils.safestring import mark_safe
+from jobs.models import Resume
+from django.contrib import messages
 from django.http import HttpResponse
 from django.contrib import admin
 from interview.models import Candidate
@@ -15,6 +19,19 @@ logger = logging.getLogger(__name__)
 
 exportable_fields = ('username', 'city', 'phone', 'bachelor_school', 'master_school', 'degree', 'first_result', 'first_interviewer_user',
                      'second_result', 'second_interviewer_user', 'hr_result', 'hr_score', 'hr_remark', 'hr_interviewer_user')
+
+
+# 通知一面面试官面试
+def notify_interviewer(modeladmin, request, queryset):
+    candidates = ""
+    interviewers = ""
+    for obj in queryset:
+        candidates = obj.username + ';' + candidates
+        interviewers = obj.first_interviewer_user.username + ';' + interviewers
+    messages.add_message(request, messages.INFO, '已经成功发送面试通知')
+
+
+notify_interviewer.short_description = u'通知一面面试官'
 
 # define export action
 
@@ -52,7 +69,7 @@ class CandidateAdmin(admin.ModelAdmin):
     exclude = ('creator', 'created_date', 'modified_date')
 
     # ,声明是iterable, 否则会报错
-    actions = (export_model_as_csv,)
+    actions = (export_model_as_csv, notify_interviewer)
 
     # 当前用户是否有导出权限
     def has_export_permission(self, request):
@@ -60,7 +77,7 @@ class CandidateAdmin(admin.ModelAdmin):
         return request.user.has_perm('%s.%s' % (opts.app_label, 'export'))
 
     list_display = (
-        'username', 'city', 'bachelor_school', 'first_score', 'first_result', 'first_interviewer_user', 'second_result', 'second_interviewer_user', 'hr_score', 'hr_result', 'last_editor')
+        'username', 'city', 'bachelor_school', 'get_resume', 'first_score', 'first_result', 'first_interviewer_user', 'second_result', 'second_interviewer_user', 'hr_score', 'hr_result', 'last_editor')
 
     # 筛选条件
     list_filter = ('city', 'first_result', 'second_result', 'hr_result',
@@ -71,6 +88,17 @@ class CandidateAdmin(admin.ModelAdmin):
 
     # 展示排序
     ordering = ('hr_result', 'second_result', 'first_result',)
+
+    # 函数产出虚拟的简历链接字段
+    def get_resume(self, obj):
+        if not obj.phone:
+            return ""
+        resumes = Resume.objects.filter(phone=obj.phone)
+        if resumes and len(resumes) > 0:
+            return mark_safe(u'<a href="/resume/%s" target="_blank">%s</a>' % (resumes[0].id, "查看简历"))
+
+    get_resume.short_description = '查看简历'
+    get_resume.allow_tags = True
 
     # 获取用户组别
     def get_group_names(self, user):
