@@ -1,0 +1,4 @@
+2021-03-28 10:45:04,151 interview.performance 17 INFO     0.39766621589660645 /admin/ {}
+2021-03-28 10:45:24,723 interview.performance 17 INFO     0.3427548408508301 /admin/interview/candidate/ {}
+2021-03-28 10:45:24,853 interview.performance 17 INFO     0.042423248291015625 /admin/jsi18n/ {}
+2021-03-28 10:45:27,342 interview.performance 17 INFO     0.026446819305419922 /resume/1/ {}
