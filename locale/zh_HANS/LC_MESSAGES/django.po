@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-29 10:41+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: jobs/models.py:30
+msgid "职位类别"
+msgstr ""
+
+#: jobs/models.py:33
+msgid "职位名称"
+msgstr ""
+
+#: jobs/models.py:36
+msgid "工作地点"
+msgstr ""
+
+#: jobs/models.py:39
+msgid "职位职责"
+msgstr ""
+
+#: jobs/models.py:42
+msgid "职位要求"
+msgstr ""
+
+#: jobs/models.py:45
+msgid "创建人"
+msgstr ""
+
+#: jobs/models.py:48 jobs/models.py:90
+msgid "创建日期"
+msgstr ""
+
+#: jobs/models.py:51
+msgid "修改时间"
+msgstr ""
+
+#: jobs/models.py:54
+msgid "职位"
+msgstr ""
+
+#: jobs/models.py:55
+msgid "职位列表"
+msgstr ""
+
+#. Translators: 简历实体的翻译
+#: jobs/models.py:63
+msgid "姓名"
+msgstr ""
+
+#: jobs/models.py:65
+msgid "申请人"
+msgstr ""
+
+#: jobs/models.py:66
+msgid "城市"
+msgstr ""
+
+#: jobs/models.py:67
+msgid "手机号码"
+msgstr ""
+
+#: jobs/models.py:68
+msgid "邮箱"
+msgstr ""
+
+#: jobs/models.py:70
+msgid "应聘职位"
+msgstr ""
+
+#: jobs/models.py:72
+msgid "生源地"
+msgstr ""
+
+#: jobs/models.py:73
+msgid "性别"
+msgstr ""
+
+#: jobs/models.py:81
+msgid "本科学校"
+msgstr ""
+
+#: jobs/models.py:83
+msgid "研究生学校"
+msgstr ""
+
+#: jobs/models.py:86
+msgid "专业"
+msgstr ""
+
+#: jobs/models.py:88
+msgid "学历"
+msgstr ""
+
+#: jobs/models.py:91
+msgid "修改日期"
+msgstr ""
+
+#: jobs/models.py:95
+msgid "自我介绍"
+msgstr ""
+
+#: jobs/models.py:97
+msgid "工作经历"
+msgstr ""
+
+#: jobs/models.py:99
+msgid "项目经历"
+msgstr ""
+
+#: jobs/models.py:102
+msgid "简历"
+msgstr ""
+
+#: jobs/models.py:103
+msgid "简历列表"
+msgstr ""
+
+#: jobs/templates/base.html:22
+msgid "苹果科技开放职位"
+msgstr ""
+
+#: jobs/templates/base.html:37
+#, python-format
+msgid " 终于等到你 %(user_name)s, 期待加入我们，用技术去探索一个新世界 "
+msgstr ""
+
+#: recruitment/urls.py:29
+msgid "苹果招聘管理系统"
+msgstr ""

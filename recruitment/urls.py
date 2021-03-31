@@ -24,6 +24,8 @@ urlpatterns = [
     path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('registration.backends.simple.urls')),
+
+    path('i18n/', include('django.conf.urls.i18n')),
 ]
 
 admin.site.site_header = _('苹果招聘管理系统')
